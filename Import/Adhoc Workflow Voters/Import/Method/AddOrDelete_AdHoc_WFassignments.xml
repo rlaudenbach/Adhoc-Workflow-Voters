@@ -1,0 +1,27 @@
+﻿<AML>
+ <Item type="Method" id="B976F3BF5C5E414593A9B023652DDDE2" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// context item:  "Activty" (single item)
+// must have Relationships:  "Activity Assignment"  --> the ones to be added or deleted
+
+//System.Diagnostics.Debugger.Launch();System.Diagnostics.Debugger.Break();
+
+// This method is called from client side. i.e. the activity completion dialog that adds or deletes the assignments
+Aras.Server.Security.Identity identity = Aras.Server.Security.Identity.GetByName("Super User"); //Get super user identity
+bool permsWasSet = Aras.Server.Security.Permissions.GrantIdentity(identity);
+
+// apply as super user to avoid permission conflicts
+this.setAction("edit");
+Item res = this;
+res = this.apply();
+
+if (permsWasSet) {Aras.Server.Security.Permissions.RevokeIdentity(identity);}
+
+if (res.isError()) {
+    return res;
+}
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>AddOrDelete_AdHoc_WFAssignments</name>
+ </Item>
+</AML>

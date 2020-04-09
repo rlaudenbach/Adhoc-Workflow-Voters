@@ -1,0 +1,6 @@
+<imports>
+  <package name="com.aras.innovator.core" path="core_extentsions">
+    <dependson name="com.aras.innovator.admin" />
+  </package>
+  <package name="Adhoc Workflow Voters" path="Adhoc Workflow Voters\Import" />
+</imports>
