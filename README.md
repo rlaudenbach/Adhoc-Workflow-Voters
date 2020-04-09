@@ -1,7 +1,7 @@
 ## Adhoc Workflow Voters v1
 - This solution adds assignments to the current activity accessed from the "Worflow Completion Dialog".  Assignments are called voters here.
 - From an extra button "View other Voters" the current list of assignments can be viewed.
-- If a user is Owner of the workflow controlled item (i.e. an ECO), her/she will see additional buttons to add, delete or change assignments.
+- If a user is Owner of the workflow controlled item (i.e. an ECO), he/she will see additional buttons to add, delete or change assignments.
 - Newly added assignments, different from the workflow map, will be flagged "adhoc". These can be edited. Others can not.
 - Non-adhoc assignments can be deleted, however, after confirming a warning.
 - Closed assignments cannot be deleted, nor edited.
@@ -30,8 +30,8 @@ With new releases of Aras Innovator the "InBasket-VoteDialog.aspx" must be merge
 ### Installation Steps
 Import must be done in 2 steps in the indicated sequence.
 
-1. Use Package Utilities and log on as "admin"
-	select path to mf file "imports.mf"  --> click import button	- imports "Rollup Calculations Utitlities"
+1. Use Package Utilities and log on as "admin". Use "merge" option.
+	select path to mf file "imports.mf", select all packages  --> click import button
 
 2. Copy the contents of folder "CodeTree" to the corresponding folders of your Aras installation.
 
