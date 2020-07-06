@@ -968,7 +968,7 @@
 			for (i=0; i<id_array.length; i++) {
 				var row = id_array[i];
 			
-				var rowIsAdhoc = (votersgrid.getUserData(row,"voter_is_adhoc") != "1");
+				var rowIsAdhoc = (votersgrid.getUserData(row,"voter_is_adhoc") == "1");
 				
 				// can not delete own assignments (of current user)
 				var assignedIdentity = votersgrid.getUserData(row,"assignid");
